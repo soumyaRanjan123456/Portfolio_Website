@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>portfolio website</title>
+	<link rel="stylesheet" type="text/css" href="Ritika.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style >
+  
+  *{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box ;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: #080808;
+  color:#fff;
+}
+#header{
+  width: 100%;
+  height: 100vh;
+  background-image: url(IMAGE/logo11.jpg);
+  background-size: cover;
+  background-position: center;
+}
+ 
+.container{
+  padding: 8px 1%;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ .logo{
+  width: 150px;
+  height: 60px;
+  color: #fff;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size:18px ;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom:-6px;
+  transition: 0.6s;
+}
+nav ul li a:hover::after
+{
+  width: 100%;
+}
+.header-text{
+  margin-top: 3%;
+  font-size: 30px;
+}
+.header-text h2{
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h2 span{
+  color: #ff004f;
+}
+
+ /*..........................About................................. */
+
+#about{
+  padding: 80px 0;
+  color: #ababab;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1{
+  flex-basis: 35%;
+
+}
+.about-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+}
+.about-col-2{
+  flex-basis: 60%;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color:#fff;
+}
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after{
+  content: '';
+  width:0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.6s;
+}
+.tab-links.active-link::after{
+  width: 50%;
+
+}
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span
+{
+  color: #FF69B4;
+  font-size: 20px;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display:block ;
+}
+
+.test {
+  color: #FF69B4;
+}
+/*...................................Services...........*/
+#Services
+{
+  padding:119px 0;
+}
+.services-list{
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.9s, transform 0.9s;
+}
+.services-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h3
+{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover{
+  background: #ff004f;
+  transform: translateY(-12px);
+}
+/*......................Portfolio..................................*/
+#portfolio{
+  padding: 50px 0;
+}
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 20px;
+  margin-top: 110px;
+
+}
+.work{
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.work img{
+  width: 500px;
+
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.6s;
+}
+.layer{
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(rgba(0, 0, 0, .6),#ff004f);
+  border-radius: 20px;
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.6s;
+}
+.layer h4{
+   font-weight: 500;
+   margin-bottom: 20px;
+}
+.layer a{
+  margin-top: 20px;
+  color:#ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+
+}
+.btn:hover{
+  background: #ff004f;
+}
+/*...............................Contact.................*/
+.contact-left{
+   flex-basis: 35%;
+
+}
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icon{
+  margin-top: 30px;
+
+}
+.social-icon a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.6s;
+}
+.social-icon a:hover{
+  color: #ff004f;
+  transform: translateY(-7px);
+}
+.btn.btn2{
+  display: inline-block;
+  background: #ff004f;
+}
+.contact-right form{
+  width: 100%;
+
+
+
+}
+ form input, form textarea{
+  width: 90%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color:#fff;
+  font-size: 18px;
+  border-radius: 6px;
+ }
+ form .btn2{
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+ }
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+
+}
+.copyright i{
+  color:#ff004f;
+}
+
+/*.........................CSS for small screen..........................*/
+@media only screen and (max-width: 600px)
+{
+   .header-text{
+     margin-top: 100%;
+     font-size: 16px;
+   }
+
+   .header-text h2{
+     font-size: 30px;
+   }
+}
+
+
+
+</style>
+
+</head>
+<body>
+  
+  <div id="header">
+  	  <div class="container">
+  	  	<nav>
+  	  		<img src="IMAGE/logo3.jpg" class="logo">
+  	  		<ul>
+  	  			<li><a href="#header">Home</a></li>
+  	  			<li><a href="#about">About</a></li>
+  	  			<li><a href="#Services">Service</a></li>
+  	  			<li><a href="#portfolio">Portfolio</a></li>
+  	  			<li><a href="#contact">Contact</a></li>
+  	  		</ul>
+  	  	</nav>
+  	  	<div class="header-text">
+  	  		<p><i>Java Full-Stack Developer.....!<i></p>
+  	  		<h2>Hii,I'm <span>Soumya</span><br> Ranjan form Odisha</h2>
+  	  		
+  	  	</div>
+  	  </div>
+  	
+  </div>
+   <!--..........................About................................. -->
+   <div id="about">
+   	<div class="container">
+   		<div class="row">
+   			<div class="about-col-1">
+   				<img src="IMAGE/logo6.jpg">
+   			</div>
+   			<div class="about-col-2">
+   				<h2 class="sub-title">About Me!</h2>
+   				<p><br><br>
+            <span class="test">"Hello, everyone!</span> I am thrilled to introduce myself as a passionate Java developer <br>who has recently entered the industry. <span class="test">My name is Soumya Ranjan Mallick</span>, and I am excited about building a successful career in Java development.<br><br>
+
+   					Skilled Java Full Stack Developer proficient in designing and developing end-to-end web applications using Java, <span class="test">SpringBoot Framework</span>, and front-end technologies like HTML, CSS, and JavaScript. Strong expertise in database management and RESTful API integration.<br><br>
+   					Detail-oriented Java Full Stack Developer with a comprehensive understanding of Java-based technologies, including J2EE, Spring MVC, and Hibernate. Proficient in front-end development using HTML, CSS, JavaScript, and experienced in database management and <span class="test">RESTful API implementation</span>.<br><br>
+   					Motivated Java Full Stack Developer with a passion for delivering high-quality software solutions. Expertise in Java, Spring Boot, JavaScript, and front-end frameworks. Skilled in database management, <span >API development</span>.</p>
+
+                      <div class="tab-titles">
+                      	<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                      	<p class="tab-links" onclick="opentab('experience')">Experience</p>
+                      	<p class="tab-links" onclick="opentab('education')">Education</p>
+                      	
+                      </div>
+
+                      <div class="tab-contents active-tab" id="skills">
+                      	<ul>
+                      		<li><span>Front-End</span><br>Html,Css,Bootstrap,JavaScript</li>
+                      		<li><span>Back-End</span><br>Core java,Advance Java,Mysql,SpringBoot,Hybernet,String Security,Rest-API</li>
+                      		<li><span>Knowledge</span><br>C-Programming, DS & Algo,Operating System, DBMS,Computer Organization & Architecher,Toc,Computer Network...!! </li>
+                      		</ul>
+                       </div>	
+                      	 <div class="tab-contents" id="experience">
+                        <ul>
+                          <li><span>1.6 year</span><br>Java Full-Stack Developement</li>
+                          <li><span>Web Development</span><br>Web App Development</li>
+                          <li><span>Back-End Development</span><br>Using Rest API in java. </li>
+                          </ul>
+                       </div> 
+                         <div class="tab-contents" id="education">
+                        <ul>
+                          <li><span>B-Tech in Computer Science & Engg </span><br>2018-2022</li>
+                          <li><span>INTERMEDIATE</span><br>2016-2018</li>
+                          <li><span>MATRICULATION</span><br>2016 </li>
+                          </ul>
+                       </div> 
+                     				
+   		              	</div>       			
+             	  	</div>
+            	</div>
+   	
+         </div>
+    <!--..........................Services................................-->
+      <div id="Services">
+        <div class="container">
+          <h2 class="sub-title">My Services</h2>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h3>Web Design</h3>
+              <p>Detail-oriented Java Full Stack Developer with a comprehensive understanding of Java-based technologies, including J2EE, Spring MVC, and Hibernate. Proficient in front-end development using HTML, CSS, JavaScript, and experienced in database </p>
+              <a href="#">Learn More</a>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-blog"></i>
+             <h3>UI/UX</h3>
+              <p>Detail-oriented Java Full Stack Developer with a comprehensive understanding of Java-based technologies, including J2EE, Spring MVC, and Hibernate. Proficient in front-end development using HTML, CSS, JavaScript, and experienced in database </p>
+              <a href="#">Learn More</a>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-mug-hot"></i>
+             <h3>Back-End</h3>
+              <p>Detail-oriented Java Full Stack Developer with a comprehensive understanding of Java-based technologies, including J2EE, Spring MVC, and Hibernate. Proficient in front-end development using HTML, CSS, JavaScript, and experienced in database </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--......................Portfolio.................-->
+
+ <div id="portfolio">
+   <div class="container">
+     <h2 class="sub-title">My Work</h2>
+     <div class="work-list">
+
+       <div class="work">
+         <img src="IMAGE/logo77.jpg" alt="">
+         <div class="layer">
+          <h4>Nature Beauty</h4>
+          <p>The App contacts you the talented people around the world. Download it from play store.</p>
+          <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+           
+         </div>
+       </div>
+
+       <div class="work">
+         <img src="IMAGE/logo8.jpg" alt="">
+          <div class="layer">
+          <h4>Social Media App</h4>
+          <p>The App contacts you the talented people around the world. Download it from play store.</p>
+          <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></i></a>
+         </div>
+       </div>
+
+       <div class="work">
+         <img src="IMAGE/logo10.jpg" alt="">
+          <div class="layer">
+          <h4>Online Shopping</h4>
+          <p>The App contacts you the talented people around the world. Download it from play store.</p>
+          <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+         </div>
+       </div>
+       
+        
+     </div>
+     <a href="#" class="btn">See More</a>
+   </div>
+ </div>
+<!--......................................Contact.....................-->
+<div id="contact">
+     
+     <div class="container">
+       <div class="row">
+         <div class="contact-left">
+           <h2 class="sub-title">Contact Me</h2>
+           <p><i class="fa-sharp fa-solid fa-paper-plane"></i>Sipun123456mallick@gmail.com</p>
+           <p><i class="fa-solid fa-phone"></i>+917809032278</p>
+           <div class="social-icon">
+           <a href="https://www.facebook.com/soumyaranjan.sipun.14/"><i class="fa-brands fa-facebook-f"></i></a>
+           <a href="https://www.linkedin.com/in/soumya-ranjan-mallick-6421531bb"><i class="fa-brands fa-linkedin-in"></i></a>
+           <a href=""><i class="fa-brands fa-instagram"></i></a>
+           <a href=""><i class="fa-brands fa-linkedlin"></i></a>
+         </div>
+         <a href="IMAGE/Engineer.pdf" download class="btn btn2">Download Cv</a>
+         </div>
+
+         <div class="contact-right">
+           <form>
+             <input type="text" name="Name" placeholder="Enter your Name" required>
+             <input type="email" name="Name" placeholder="Enter your E-mail" required>
+             <textarea  name="Message" rows="6" placeholder="Enter your Message" ></textarea>
+             <button type="submit" class="btn btn2">Sumbit</button>
+           </form>
+         </div>
+       </div>
+     </div>
+    <div class="copyright">
+      <p> @ Soumya Ranjan.<i class="fa-solid fa-heart"></i>Create it...!! </p>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname) {
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+  }
+</script>
+
+</body>
+</html>
